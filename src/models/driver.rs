@@ -1,17 +1,18 @@
 
-use crate::{schema::list_of_drivers, dbconn::conn};
+
 use diesel::{Insertable,Queryable};
 use serde::{Serialize,Deserialize};
-use crate::models::traits::InOn;
 use diesel::prelude::*;
 
+//Внутреннее
+use crate::{schema::list_of_drivers};
+use crate::models::traits::InOn;
 
-
-pub enum TaxiType{
+/*pub enum TaxiType{
     Economy,
     Comfort,
     Business,
-}
+}*/
 
 #[derive(Insertable,Queryable,Serialize,Deserialize)]
 #[diesel(table_name=list_of_drivers)]

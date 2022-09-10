@@ -2,7 +2,7 @@ use diesel::{Insertable, Queryable,PgConnection};
 use serde::{Serialize,Deserialize};
 use diesel::prelude::*;
 
-
+//Внутреннее
 use crate::models::traits::InOn;
 use crate::schema::list_of_users;
 
