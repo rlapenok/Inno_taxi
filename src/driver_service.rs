@@ -9,7 +9,7 @@ mod api;
 mod schema;
 
 
-use crate::api::api_for_user_service::*;
+use crate::api::api_for_driver_service::*;
 
 
 
@@ -19,6 +19,7 @@ async fn main()->std::io::Result<()> {
         App::new()
         .service(singin)
         .service(singup)
-        .service(all)
-    }).bind(("127.0.0.1",8080)).unwrap().run().await
+        //.service(all)
+        .service(order)
+    }).bind(("127.0.0.1",6060)).unwrap().run().await
 }

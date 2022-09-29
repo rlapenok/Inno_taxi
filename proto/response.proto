@@ -1,0 +1,19 @@
+syntax="proto3";
+
+package response;
+
+service response_from_grc{
+    rpc send(mark) returns (response_from_server);
+}
+
+
+message mark{
+    int32 phone=1;
+}
+enum TypeResponse{
+    Ok=0;
+    NotFoundDriver=1;
+}
+message response_from_server{
+    TypeResponse type_response=1;
+}
